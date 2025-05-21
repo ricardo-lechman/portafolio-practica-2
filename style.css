@@ -312,11 +312,17 @@ section {
 
 /* Projects Section */
 .projects-grid {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .project-card {
+    width: 23%;
+    min-height: 450px; /* ajustá según el diseño */
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
@@ -329,22 +335,17 @@ section {
 }
 
 .project-img {
-    height: 200px;
-    background-size: cover;
-    justify-content: center;
-    margin-left:  20px;
-}
-.project-img2 {
-    height: 200px;
-    background-size: cover;
-    justify-content: center;
-    margin-left: 15%;
-    margin-top: 25px;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
 }
 
 .project-info {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    text-align: justify;
+    flex-grow: 1;
 }
 
 .project-info h3 {
@@ -354,6 +355,7 @@ section {
 
 .project-info p {
     margin-bottom: 15px;
+    min-height: 60px;
     color: var(--dark-color);
 }
 
@@ -361,7 +363,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-top: auto; /* empuja hacia abajo, pero antes de los botones */
 }
 
 .project-tech span {
@@ -372,10 +374,10 @@ section {
     font-weight: 300;
 }
 
-
 .project-links {
     display: flex;
     gap: 10px;
+    margin-top: 15px;
 }
 /* Testimonials Section */
 .testimonials {
@@ -617,5 +619,17 @@ max-width: 300px;
     
     .project-links {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 1200px) {
+    .project-card {
+        width: 48%; /* 2 por fila */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* 1 por fila en pantallas chicas */
     }
 }
