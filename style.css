@@ -121,7 +121,8 @@ section {
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 0;
+    /* top: 0; */ 
+    bottom: 0; /* Lo que pidio el profe */
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
@@ -134,6 +135,18 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.member-img1 { /* Lo que pidio el profe */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    margin: 0 auto;
 }
 
 .logo {
